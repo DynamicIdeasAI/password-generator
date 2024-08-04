@@ -1,5 +1,5 @@
 {
-  "name": "@dynamicideas/package-name",
+  "name": "@dynamicideas/password-generator",
   "version": "0.8.0",
   "description": "",
   "main": "dist/index.js",
@@ -20,7 +20,9 @@
     "url": "git+https://github.com/DynamicIdeasAI/template_types_npm_package.git"
   },
   "keywords": [
-    "Dynamic Ideas"
+    "Dynamic Ideas",
+    "password",
+    "generator"
   ],
   "author": "Dynamic Ideas (https://dynamicideas.ai)",
   "contributors": [
@@ -55,7 +57,7 @@
     "husky": "9.1.0",
     "pinst": "3.0.0",
     "tslint": "6.1.3",
-    "lint-staged": "15.2.7",
-    "typescript": "5.5.3"
+    "lint-staged": "15.2.8",
+    "typescript": "5.5.4"
   }
 }
