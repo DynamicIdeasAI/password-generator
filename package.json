@@ -1,0 +1,61 @@
+{
+  "name": "@dynamicideas/package-name",
+  "version": "0.8.0",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "lint": "eslint . --fix --max-warnings=0",
+    "format": "prettier -w .",
+    "test": "",
+    "clear": "rm -rf dist",
+    "postinstall": "husky install",
+    "lint-staged": "lint-staged",
+    "prepack": "pinst --disable",
+    "postpack": "pinst --enable",
+    "build": "tsc --build --force",
+    "pub": "rm -rf dist && prettier -w src && npm run build && npm publish --access public && rm -rf dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DynamicIdeasAI/template_types_npm_package.git"
+  },
+  "keywords": [
+    "Dynamic Ideas"
+  ],
+  "author": "Dynamic Ideas (https://dynamicideas.ai)",
+  "contributors": [
+    "Dynamic Ideas (https://dynamicideas.ai)",
+    "Capt. Michael (CaptMichaelDev@gmail.com)"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/DynamicIdeasAI/template_types_npm_package/issues"
+  },
+  "homepage": "https://github.com/DynamicIdeasAI/template_types_npm_package#readme",
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint"
+    }
+  },
+  "lint-staged": {
+    "**/*.ts": [
+      "npx prettier --write",
+      "npx eslint --fix"
+    ]
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@commitlint/cli": "19.3.0",
+    "@commitlint/config-conventional": "19.2.2",
+    "@types/node": "20.14.11",
+    "eslint": "8.57.0",
+    "eslint-config-airbnb-typescript": "18.0.0",
+    "eslint-config-prettier": "9.1.0",
+    "eslint-plugin-import": "2.29.1",
+    "husky": "9.1.0",
+    "pinst": "3.0.0",
+    "tslint": "6.1.3",
+    "lint-staged": "15.2.7",
+    "typescript": "5.5.3"
+  }
+}
