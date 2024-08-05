@@ -28,7 +28,7 @@ jobs:
         with:
           node-version: 16
           registry-url: https://registry.npmjs.org/
-      - run: npm ci
+      - run: npm ci -f
       - run: git config user.email "CaptMichaelDev@gmail.com"
       - run: git config user.name "Capt. Michael"
       - run: npm version patch --force
