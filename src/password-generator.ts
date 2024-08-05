@@ -10,7 +10,7 @@ export default class PasswordGenerator {
 
   private constructor() {}
 
-  static generatePassword(option: PasswordOptionDataType): string {
+  public static generatePassword(option: PasswordOptionDataType): string {
     const {
       length,
       containsLowercase,
