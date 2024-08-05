@@ -1,6 +1,6 @@
-import { PasswordOptionDataType } from '../types/password.type';
+import { PasswordOptionDataType } from './types/password.type';
 
-export default class PasswordHelper {
+export default class PasswordGenerator {
   static characterMap = {
     lowercase: 'abcdefghijklmnopqrstuvwxyz',
     uppercase: 'ABCDEFGHIJKLMNOPQRSTUVWXYZ',
