@@ -1,7 +1,7 @@
 import { PasswordOptionDataType } from './types/password.type';
 
 export default class PasswordGenerator {
-  static characterMap = {
+  static charMap = {
     lowercase: 'abcdefghijklmnopqrstuvwxyz',
     uppercase: 'ABCDEFGHIJKLMNOPQRSTUVWXYZ',
     number: '0123456789',
@@ -24,21 +24,20 @@ export default class PasswordGenerator {
     if (!containsLowercase && !containsUppercase && !containsNumber && !containsSpecialCharacter)
       throw new Error('At least one character type must be selected');
 
-    let characters = '';
+    let chars = '';
 
-    if (containsLowercase) characters = characters + this.characterMap.lowercase;
-    if (containsUppercase) characters = characters + this.characterMap.uppercase;
-    if (containsNumber) characters = characters + this.characterMap.number;
-    if (containsSpecialCharacter) characters = characters + this.characterMap.special;
+    if (containsLowercase) chars = chars + this.charMap.lowercase;
+    if (containsUppercase) chars = chars + this.charMap.uppercase;
+    if (containsNumber) chars = chars + this.charMap.number;
+    if (containsSpecialCharacter) chars = chars + this.charMap.special;
 
     excludeCharacters?.forEach((char) => {
-      characters = characters.replace(new RegExp(char, 'g'), '');
+      chars = chars.replace(new RegExp(char, 'g'), '');
     });
 
     let password = '';
 
-    for (let index = 0; index < length; index++)
-      password += characters.charAt(Math.floor(Math.random() * characters.length));
+    for (let index = 0; index < length; index++) password += chars.charAt(Math.floor(Math.random() * chars.length));
 
     return password;
   }
