@@ -1,1 +1,2 @@
-export * from './types/base/base.type';
+export * from './types/password.type';
+export * from './helpers/password.helper';
