@@ -6,7 +6,7 @@ name: Node.js Package
 on:
   push:
     branches:
-      - main
+      - release
 
 jobs:
   build:
@@ -15,7 +15,7 @@ jobs:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
         with:
-          node-version: 16
+          node-version: 22
       - run: npm ci -f
       - run: npm test
 
@@ -26,7 +26,7 @@ jobs:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
         with:
-          node-version: 16
+          node-version: 22
           registry-url: https://registry.npmjs.org/
       - run: npm ci -f
       - run: git config user.email "CaptMichaelDev@gmail.com"
@@ -35,4 +35,4 @@ jobs:
       - run: tsc --build --force
       - run: npm publish --access public
         env:
-          NODE_AUTH_TOKEN: ${{secrets.npm_token}}
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
