@@ -1,4 +1,4 @@
-import { PasswordOptionDataType } from './types/password.type';
+import type { PasswordOptionDataType } from './types/password.type';
 
 export default class PasswordGenerator {
   static charMap = {
